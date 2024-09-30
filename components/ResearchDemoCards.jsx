@@ -2,7 +2,7 @@ import {ResearchDemoCard} from "@/components/index";
 
 export default function ResearchDemoCards({ researchDemos }) {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <section className="flex flex-col md:flex-row gap-10 justify-center items-center md:items-stretch">
       {Object.entries(researchDemos).map(([key, researchDemo], index) => (
         <ResearchDemoCard
           key={index}
