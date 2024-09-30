@@ -1,4 +1,4 @@
-const Page = () => {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <header className="bg-blue-600 p-4">
@@ -20,6 +20,4 @@ const Page = () => {
       </footer>
     </div>
   );
-};
-
-export default Page;
+}

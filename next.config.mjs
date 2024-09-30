@@ -4,6 +4,8 @@ const nextConfig = {
   assetPrefix: '/member_personal_webpages/',
   reactStrictMode: true,
   swcMinify: true,
+  trailingSlash: true,
+  output: "export",
 };
 
 export default nextConfig;
