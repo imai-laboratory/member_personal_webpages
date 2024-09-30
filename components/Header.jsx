@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="flex bg-blue-400 p-2 mx-2 h-16 sticky top-0 z-50 rounded-xl">
+    <header className="flex bg-blue-400 p-2 h-16 sticky top-0 z-50 rounded-xl">
       <Link href={CONFIGS.HOMEPAGE_URL}>
         <Image
           src={CONFIGS.LOGO_IMAGE}
@@ -15,6 +15,10 @@ export default function Header() {
           priority={true}
         />
       </Link>
+
+      <div className="md:hidden">
+        <button className="text-white">Menu</button>
+      </div>
     </header>
   );
 }
