@@ -17,7 +17,7 @@ export default function Profile({ profileData }) {
           <p className="flex gap-2"><strong>名前:</strong> <span>{profileData.name}</span></p>
           <p className="flex gap-2"><strong>学年:</strong> <span>{profileData.grade}</span></p>
           <p className="flex gap-2"><strong>所属チーム:</strong>
-            {profileData.teams.map((team, index) => (
+            {profileData.teams?.map((team, index) => (
               <span key={index}>{team}</span>
             ))}
           </p>
