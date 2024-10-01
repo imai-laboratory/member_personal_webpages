@@ -1,6 +1,11 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { SiZenn } from "react-icons/si";
 import DesignA from "@/components/DesignSamples/DesignA";
+
+// メタデータ追加は自由ですが、SEO対策のために追加することをお勧めします。
+export const metadata = {
+  title: '[Imai Lab]中西 建心 Personal Webpage',
+  description: '中西 建心の今井研個人ページです。',
+  keywords: '中西 建心, Kenshin Nakanishi, Imai Lab, 今井研, Keio University, 慶應義塾大学',
+}
 
 export default function Page() {
   const profileData = {
@@ -10,15 +15,13 @@ export default function Page() {
     grade: '修士課程1年',
     imageUrl: '/member_personal_webpages/members/kenshin/profile.jpg',
     name: '中西 建心',
-    socialMediaLists: [
+    socialMediaLists: [ // ./utils/getSocialIcons.jsに存在するアイコンのみ使用できます
       {
         name: "GitHub",
-        icon: <GitHubIcon />,
         link: "https://github.com/Kenshin0011",
       },
       {
         name: "Zenn",
-        icon: <SiZenn />,
         link: "https://zenn.dev/kenshin0011",
       },
     ],
