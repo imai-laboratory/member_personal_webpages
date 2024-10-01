@@ -1,22 +1,25 @@
 import {BaseLayout, Profile, Publications, Research, ResearchDemoCards} from "@/components";
 
 export default function DesignA({ profileData, researchData, publicationsData }) {
+  const navItems = [
+    { id: 'profile', title: 'プロフィール' },
+    { id: 'research', title: '研究内容' },
+    { id: 'demo', title: '研究紹介' },
+    { id: 'publications', title: '研究業績' },
+  ];
+
   return (
-    <BaseLayout>
+    <BaseLayout email={profileData.email} navItems={navItems}>
       <Profile
-        id="profile"
         profileData={profileData}
       />
       <Research
-        id="research"
         contentData={researchData.contents}
       />
       <ResearchDemoCards
-        id="demo"
         researchDemos={researchData.demoUrls}
       />
       <Publications
-        id="publications"
         publications={publicationsData.publications}
       />
     </BaseLayout>
