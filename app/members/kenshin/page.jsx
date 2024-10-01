@@ -1,13 +1,6 @@
-import {
-  Footer,
-  Header,
-  Profile,
-  Publications,
-  Research,
-  ResearchDemoCards,
-} from "/components";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { SiZenn } from "react-icons/si";
+import DesignA from "@/components/DesignSamples/DesignA";
 
 export default function Page() {
   const profileData = {
@@ -82,21 +75,10 @@ export default function Page() {
   };
 
   return (
-    <div>
-      <Header/>
-      <Profile
-        profileData={profileData}
-      />
-      <Research
-        contentData={researchData.contents}
-      />
-      <ResearchDemoCards
-        researchDemos={researchData.demoUrls}
-      />
-      <Publications
-        publications={publicationsData.publications}
-      />
-      <Footer email={profileData.email}/>
-    </div>
+    <DesignA
+      profileData={profileData}
+      researchData={researchData}
+      publicationsData={publicationsData}
+    />
   );
 }
