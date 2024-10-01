@@ -1,9 +1,9 @@
-import Layout from "@/components/layout/Layout";
+import BaseLayout from "@/components/layout/BaseLayout";
 import { Profile, Publications, Research, ResearchDemoCards } from "@/components";
 
 export default function DesignA({ profileData, researchData, publicationsData }) {
   return (
-    <Layout title="Design A Page" description="Design A Description">
+    <BaseLayout>
       <Profile
         id="profile"
         profileData={profileData}
@@ -20,6 +20,6 @@ export default function DesignA({ profileData, researchData, publicationsData })
         id="publications"
         publications={publicationsData.publications}
       />
-    </Layout>
+    </BaseLayout>
   );
 }

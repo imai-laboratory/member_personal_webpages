@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SocialIcons from "@/components/ui/SocialIcons";
 
 export default function Profile({ profileData }) {
   return (
@@ -28,20 +29,7 @@ export default function Profile({ profileData }) {
             ))}
           </p>
 
-          <div className="flex w-5 h-5 items-center space-x-4">
-            {profileData.socialMediaLists?.map((social, index) => (
-              <a
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={index}
-                className="text-2xl text-gray-600 hover:text-blue-500"
-                aria-label={social.name}
-              >
-                {social.icon}
-              </a>
-            ))}
-          </div>
+          <SocialIcons socialMediaLists={profileData.socialMediaLists} />
 
           <p className="text-gray-500">
             {profileData.description}
