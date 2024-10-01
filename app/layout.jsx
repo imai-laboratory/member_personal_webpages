@@ -13,13 +13,9 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: '%s | Imai Lab Personal Webpages',
+  title: 'Imai Lab Personal Webpages',
   description: 'Imai Lab Personal Webpages',
-  metadataBase: {
-    title: 'Imai Lab Personal Webpages',
-    description: 'Imai Lab Personal Webpages',
-    keywords: 'Imai Lab, Keio University, Imai, Lab, Personal Webpages',
-  }
+  keywords: 'Imai Lab, 今井研, Keio University, 慶應義塾大学',
 };
 
 export default function RootLayout({ children }) {
