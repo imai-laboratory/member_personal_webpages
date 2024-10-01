@@ -2,9 +2,7 @@ import Image from "next/image";
 
 export default function Profile({ profileData }) {
   return (
-    <section className="relative w-full h-full bg-cover bg-center" style={{ backgroundImage: `url(${profileData.backgroundImage})` }}>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
-
+    <section className="relative w-full h-full bg-cover bg-center">
       <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center p-8 md:p-16 space-y-6 md:space-y-0 md:space-x-8">
         <div className="w-full md:w-1/3 flex justify-center items-start md:items-center">
           <div className="relative rounded-full border-4 border-white overflow-hidden">
@@ -37,8 +35,7 @@ export default function Profile({ profileData }) {
           </div>
 
           <p className="text-gray-500">
-            これは段落です。「テキストを編集」をクリックするか、ここをダブルクリックしてテキストを追加・編集してください。
-            また、文字の色やフォントを変更することもできます。まずはサイトやあなた自身について書いてみましょう。
+            {profileData.description}
           </p>
         </div>
       </div>
