@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "postexport": "rm -f ./out/404.html ./out/index.html ./out/index.txt",
-    "build": "next build && yarn postexport",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },

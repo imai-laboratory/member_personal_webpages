@@ -1,4 +1,4 @@
-import {ResearchDemoCard} from "@/components/index";
+import {Card} from "@/components";
 
 export default function ResearchDemoCards({ researchDemos }) {
   return (
@@ -6,7 +6,7 @@ export default function ResearchDemoCards({ researchDemos }) {
       <h2 className="flex items-center text-3xl px-14 text-blue-500 font-semibold">デモ動画</h2>
       <div className="flex flex-col md:flex-row gap-10 justify-center items-center md:items-stretch">
         {Object.entries(researchDemos)?.map(([key, researchDemo], index) => (
-          <ResearchDemoCard
+          <Card
             key={index}
             title={researchDemo.title}
             description={researchDemo.description}
