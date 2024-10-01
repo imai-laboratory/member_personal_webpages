@@ -7,9 +7,9 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
-import { VideoPlayer } from "@/components/index";
+import { VideoPlayer } from "@/components";
 
-export default function ResearchDemoCard({ title, description, videoUrl, thumbnailUrl }) {
+export default function BaseCard({ title, description, videoUrl, thumbnailUrl }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

@@ -15,10 +15,6 @@ export default function Header() {
           priority={true}
         />
       </Link>
-
-      <div className="md:hidden">
-        <button className="text-white">Menu</button>
-      </div>
     </header>
   );
 }
