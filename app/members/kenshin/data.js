@@ -3,7 +3,7 @@ const pathName = 'kenshin';
 export const profileData = {
   backgroundImage: `/member_personal_webpages/members/${pathName}/bg.jpg`,
   email: 'nakanishi@ailab.ics.keio.ac.jp',
-  description: 'AI心理チームに所属しています。自然言語処理を中心に研究しています。今井研のWeb係も担当しています。',
+  description: '自然言語処理を中心に研究しています。今井研のWeb係も担当しています。',
   grade: '修士課程1年',
   imageUrl: `/member_personal_webpages/members/${pathName}/profile.jpg`,
   name: '中西 建心',
