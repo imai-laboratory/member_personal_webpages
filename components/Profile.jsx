@@ -2,8 +2,11 @@ import Image from "next/image";
 
 export default function Profile({ profileData }) {
   return (
-    <section className="relative w-full h-full bg-cover bg-center">
-      <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center p-8 md:p-16 space-y-6 md:space-y-0 md:space-x-8">
+    <section className="relative w-full h-full bg-cover bg-center"
+             style={{backgroundImage: `url(${profileData.backgroundImage})`}}>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
+      <div
+        className="relative z-10 flex flex-col md:flex-row items-start md:items-center p-8 md:p-16 space-y-6 md:space-y-0 md:space-x-8">
         <div className="w-full md:w-1/3 flex justify-center items-start md:items-center">
           <div className="relative rounded-full border-4 border-white overflow-hidden">
             <Image

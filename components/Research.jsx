@@ -1,19 +1,10 @@
-import {Publications, ResearchDemoCards} from "@/components/index";
-
-export default function Research({ contentData, researchDemos, publicationsData }) {
+export default function Research({ contentData }) {
   return (
-    <section className="flex flex-col gap-6 p-6 bg-green-100 rounded-md">
-      <h2 className="text-xl font-semibold">研究内容</h2>
-      <p className="p-4 bg-white rounded-md">
+    <section className="flex flex-col md:flex-row items-center gap-6 p-20 bg-customBlue rounded-md">
+      <h2 className="w-full md:w-1/2 p-4 text-3xl text-blue-500 font-semibold">研究内容</h2>
+      <p className="w-full md:w-1/2 p-4 bg-white rounded-md">
         {contentData.description}
       </p>
-      <h2 className="text-xl font-semibold">デモ動画</h2>
-      <ResearchDemoCards
-        researchDemos={researchDemos}
-      />
-      <Publications
-        publications={publicationsData.publications}
-      />
     </section>
   )
 }
