@@ -1,5 +1,4 @@
-import BaseLayout from "@/components/layout/BaseLayout";
-import { Profile, Publications, Research, ResearchDemoCards } from "@/components";
+import {BaseLayout, Profile, Publications, Research, ResearchDemoCards} from "@/components";
 
 export default function DesignA({ profileData, researchData, publicationsData }) {
   return (

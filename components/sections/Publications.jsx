@@ -1,4 +1,4 @@
-import Publication from "@/components/ui/Publication";
+import {Publication} from "@/components";
 
 export default function Publications({ publications }) {
   return (

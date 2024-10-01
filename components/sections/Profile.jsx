@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SocialIcons from "@/components/ui/SocialIcons";
+import {SocialIcons} from "@/components";
 
 export default function Profile({ profileData }) {
   return (
