@@ -1,9 +1,13 @@
 import {
   Footer,
   Header,
-  Profile, Publications,
-  Research, ResearchDemoCards,
+  Profile,
+  Publications,
+  Research,
+  ResearchDemoCards,
 } from "/components";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { SiZenn } from "react-icons/si";
 
 export default function Page() {
   const profileData = {
@@ -13,6 +17,18 @@ export default function Page() {
     grade: '修士課程1年',
     imageUrl: '/member_personal_webpages/members/kenshin/profile.jpg',
     name: '中西 建心',
+    socialMediaLists: [
+      {
+        name: "GitHub",
+        icon: <GitHubIcon />,
+        link: "https://github.com/Kenshin0011",
+      },
+      {
+        name: "Zenn",
+        icon: <SiZenn />,
+        link: "https://zenn.dev/kenshin0011",
+      },
+    ],
     teams: ['AI心理'],
   };
 
@@ -80,7 +96,6 @@ export default function Page() {
       <Publications
         publications={publicationsData.publications}
       />
-
       <Footer email={profileData.email}/>
     </div>
   );
