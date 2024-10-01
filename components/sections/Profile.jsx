@@ -1,9 +1,10 @@
 import Image from "next/image";
 import {SocialIcons} from "@/components";
+import {Chip} from "@mui/material";
 
 export default function Profile({ profileData }) {
   return (
-    <section className="relative w-full h-full bg-cover bg-center"
+    <section id="profile" className="relative w-full h-full bg-cover bg-center"
              style={{backgroundImage: `url(${profileData.backgroundImage})`}}>
       <div className="absolute inset-0"></div>
       <div
@@ -19,15 +20,21 @@ export default function Profile({ profileData }) {
             />
           </div>
         </div>
-
+x
         <div className="w-full md:w-2/3 bg-white p-8 rounded-lg shadow-lg space-y-4">
           <h1 className="text-3xl font-bold">{profileData.name}</h1>
           <p className="text-lg text-gray-600">{profileData.grade}</p>
-          <p className="flex gap-2"><strong>所属チーム:</strong>
+          <div className="flex gap-2"><strong>所属チーム:</strong>
             {profileData.teams?.map((team, index) => (
-              <span key={index}>{team}</span>
+              <Chip
+                key={index}
+                label={team}
+                color="primary"
+                size="small"
+                variant="outlined"
+              />
             ))}
-          </p>
+          </div>
 
           <SocialIcons socialMediaLists={profileData.socialMediaLists} />
 

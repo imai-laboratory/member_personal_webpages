@@ -1,11 +1,11 @@
 import {Footer, Header} from "@/components";
 
-export default function BaseLayout({ children }) {
+export default function BaseLayout({ children, email, navItems }) {
   return (
     <div>
-      <Header />
+      <Header navItems={navItems} />
       <main>{children}</main>
-      <Footer />
+      <Footer email={email} />
     </div>
   );
 }
