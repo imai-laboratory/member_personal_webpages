@@ -53,17 +53,19 @@ export default function Header({ navItems }) {
           edge="start"
           color="inherit"
           aria-label="menu"
-          className="w-14 h-14 md:hidden text-white"
+          className="w-12 h-12 md:hidden text-white"
           onClick={toggleDrawer}
         >
-          <MenuIcon />
+          <MenuIcon className="w-6 h-6 "/>
         </IconButton>
 
         <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
           <Box className="w-64 flex flex-col h-full overflow-y-auto bg-gradient-to-b from-blue-500 to-blue-300 text-white hover:bg-blue-700">
-            <IconButton onClick={toggleDrawer} className="self-end text-white">
-              <CloseIcon />
-            </IconButton>
+            <div className="flex justify-end items-center mr-8" style={{ height: `${headerHeight}px` }}>
+              <IconButton onClick={toggleDrawer} className="w-12 h-12 text-white">
+                <CloseIcon className="w-6 h-6"/>
+              </IconButton>
+            </div>
             <List>
               {navItems?.map((item) => (
                 <ListItem className="hover:bg-blue-600" onClick={toggleDrawer} key={item.id}>
