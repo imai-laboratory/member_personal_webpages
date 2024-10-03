@@ -31,6 +31,7 @@ export const researchData = {
   },
   contents: {
     description: '自然言語処理を中心に研究しています。ある文脈の中での会話の流れを理解するための技術の開発を行っています。',
+    keywords: ['自然言語処理', '対話文脈理解', '大規模言語モデル'],
   }
 };
 
