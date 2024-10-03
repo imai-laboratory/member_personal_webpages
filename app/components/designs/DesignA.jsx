@@ -1,4 +1,4 @@
-import {BaseLayout, Profile, Publications, Research, ResearchDemoCards} from "@/components";
+import {BaseLayout, Profile, Publications, Research, ResearchDemoCards} from "@/app/components";
 
 export default function DesignA({ profileData, researchData, publicationsData }) {
   const navItems = [

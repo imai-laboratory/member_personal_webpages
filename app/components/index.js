@@ -1,5 +1,5 @@
-// Path: components/DesignSamples
-export { default as DesignA } from './DesignSamples/DesignA';
+// Path: components/designs
+export { default as DesignA } from '@/app/components/designs/DesignA';
 
 // Path: components/layout/
 export { default as BaseLayout } from './layout/BaseLayout';

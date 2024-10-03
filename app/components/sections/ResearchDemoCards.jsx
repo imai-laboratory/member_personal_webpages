@@ -1,4 +1,4 @@
-import {BaseCard} from "@/components";
+import {BaseCard} from "@/app/components";
 
 export default function ResearchDemoCards({ researchDemos }) {
   return (

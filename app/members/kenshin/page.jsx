@@ -1,4 +1,4 @@
-import { DesignA } from "@/components";
+import { DesignA } from "@/app/components";
 // import先はそれぞれ異なるので注意
 import { profileData, researchData, publicationsData } from "@/app/members/kenshin/data";
 

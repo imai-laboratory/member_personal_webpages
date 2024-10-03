@@ -1,4 +1,4 @@
-import {Footer, Header} from "@/components";
+import {Footer, Header} from "@/app/components";
 
 export default function BaseLayout({ children, email, navItems }) {
   return (

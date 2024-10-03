@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SocialIcons } from "@/components";
+import { SocialIcons } from "@/app/components";
 import { Chip } from "@mui/material";
 
 export default function Profile({ profileData }) {
