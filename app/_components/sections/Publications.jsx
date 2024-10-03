@@ -1,4 +1,4 @@
-import {Publication} from "@/app/components";
+import {Publication} from "@/app/_components";
 
 export default function Publications({ publications }) {
   return (

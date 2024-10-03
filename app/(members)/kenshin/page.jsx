@@ -1,6 +1,6 @@
-import { DesignA } from "@/app/components";
+import { DesignA } from "@/app/_components";
 // import先はそれぞれ異なるので注意
-import { profileData, researchData, publicationsData } from "@/app/members/kenshin/data";
+import { profileData, researchData, publicationsData } from "@/app/(members)/kenshin/data";
 
 // メタデータ追加は自由ですが、SEO対策のために追加することをお勧めします。
 export const metadata = {

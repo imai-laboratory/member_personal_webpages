@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
-import { VideoPlayer } from "@/app/components";
+import { VideoPlayer } from "@/app/_components";
 
 export default function BaseCard({ title, description, videoUrl, thumbnailUrl }) {
   const [open, setOpen] = useState(false);
