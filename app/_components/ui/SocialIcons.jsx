@@ -1,4 +1,4 @@
-import {getSocialIcon} from "@/utils/getSocialIcon";
+import {getSocialIcon} from "@/app/_common/utils/getSocialIcon";
 
 export default function SocialIcons({ socialMediaLists }) {
   return (

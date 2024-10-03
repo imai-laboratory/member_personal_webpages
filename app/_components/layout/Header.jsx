@@ -1,6 +1,6 @@
 'use client';
 import Link from "next/link";
-import { CONFIGS } from "@/constants/configs";
+import { CONFIGS } from "@/app/_common/constants/configs";
 import Image from "next/image";
 import { Link as Scroll } from 'react-scroll';
 import {
