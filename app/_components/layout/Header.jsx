@@ -1,6 +1,6 @@
 'use client';
 
-import { AppBar, Toolbar, IconButton, Typography, Button, Drawer, List, ListItem, ListItemText, Box } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Drawer, List, ListItem, ListItemText, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
@@ -33,9 +33,9 @@ export default function Header({ navItems }) {
           </Link>
         </Typography>
 
-        <Box className="hidden md:flex space-x-10 overflow-hidden max-w-[70%] h-full mr-10">
+        <Box className="hidden md:flex overflow-hidden max-w-[70%] h-full mr-10">
           {navItems?.map((item) => (
-            <div key={item.id} className="h-full cursor-pointer">
+            <div key={item.id} className="w-auto h-full  cursor-pointer hover:bg-blue-700 px-6">
               <Scroll
                 to={item.id}
                 smooth={true}
@@ -53,20 +53,20 @@ export default function Header({ navItems }) {
           edge="start"
           color="inherit"
           aria-label="menu"
-          className="md:hidden text-white"
+          className="w-14 h-14 md:hidden text-white"
           onClick={toggleDrawer}
         >
           <MenuIcon />
         </IconButton>
 
         <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
-          <Box className="w-64 flex flex-col h-full overflow-y-auto bg-gradient-to-b from-blue-500 to-blue-300 text-white">
+          <Box className="w-64 flex flex-col h-full overflow-y-auto bg-gradient-to-b from-blue-500 to-blue-300 text-white hover:bg-blue-700">
             <IconButton onClick={toggleDrawer} className="self-end text-white">
               <CloseIcon />
             </IconButton>
             <List>
               {navItems?.map((item) => (
-                <ListItem onClick={toggleDrawer} key={item.id}>
+                <ListItem className="hover:bg-blue-600" onClick={toggleDrawer} key={item.id}>
                   <Scroll
                     to={item.id}
                     smooth={true}
