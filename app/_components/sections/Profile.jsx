@@ -19,7 +19,7 @@ export default function Profile({ profileData }) {
             />
           </div>
         </div>
-x
+
         <div className="w-full md:w-2/3 bg-white p-8 rounded-lg shadow-lg space-y-4">
           <h1 className="text-3xl font-bold">{profileData.name}</h1>
           <p className="text-lg text-gray-600">{profileData.grade}</p>
