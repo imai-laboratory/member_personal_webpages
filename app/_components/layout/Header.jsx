@@ -1,35 +1,26 @@
 'use client';
-import Link from "next/link";
-import { CONFIGS } from "@/app/_common/constants/configs";
-import Image from "next/image";
-import { Link as Scroll } from 'react-scroll';
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle
-} from "@nextui-org/react";
-import {useEffect, useRef, useState} from "react";
+
+import { AppBar, Toolbar, IconButton, Typography, Button, Drawer, List, ListItem, ListItemText, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { useState } from 'react';
+import { Link as Scroll } from 'react-scroll';
+import {CONFIGS} from "@/app/_common/constants/configs";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Header({ navItems }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [menuTop, setMenuTop] = useState(0);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const headerHeight = 64;
 
-  useEffect(() => {
-    setMenuTop(window.scrollY + headerHeight);
-  }, [isMenuOpen]);
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
 
   return (
-    <Navbar position="sticky" onMenuOpenChange={setIsMenuOpen} className="bg-blue-600 p-2 top-0 z-50"
-            style={{ height: `${headerHeight}px` }}>
-      <NavbarContent justify="start">
-        <NavbarBrand className="flex items-center max-h-full">
+    <AppBar position="sticky" className="bg-blue-600" sx={{ height: `${headerHeight}px` }}>
+      <Toolbar className="flex h-full justify-between items-center">
+        <Typography variant="h6" className="text-white font-bold">
           <Link href={CONFIGS.HOMEPAGE_URL}>
             <Image
               src={CONFIGS.LOGO_IMAGE}
@@ -40,44 +31,59 @@ export default function Header({ navItems }) {
               priority={true}
             />
           </Link>
-        </NavbarBrand>
-      </NavbarContent>
-      <NavbarContent className="hidden md:flex space-x-12 pr-20 text-white font-bold items-center">
-        {navItems?.map((item) => (
-          <NavbarItem key={item.id}>
-            <Scroll to={item.id} smooth={true} duration={500} offset={-headerHeight} className="cursor-pointer hover:underline">
-              {item.title}
-            </Scroll>
-          </NavbarItem>
-        ))}
-      </NavbarContent>
-      <NavbarContent className="md:hidden px-4">
-        <NavbarMenuToggle
-          icon={isMenuOpen ? <CloseIcon className="text-white" /> : <MenuIcon className="text-white" />}
-        />
-      </NavbarContent>
+        </Typography>
 
-      <NavbarMenu
-        className="absolute right-0 w-1/3 bg-gradient-to-b from-blue-500 to-blue-300 z-50 max-h-[40vh]"
-        style={{
-          top: `${menuTop}px`,
-          overflowY: 'auto',
-      }}
-      >
-        {navItems?.map((item) => (
-          <NavbarMenuItem key={item.id} className="flex p-4 justify-center">
-            <Scroll
-              to={item.id}
-              smooth={true}
-              duration={500}
-              offset={-headerHeight}
-              className="cursor-pointer hover:underline text-white font-bold"
-            >
-              {item.title}
-            </Scroll>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
+        <Box className="hidden md:flex space-x-10 overflow-hidden max-w-[70%] h-full mr-10">
+          {navItems?.map((item) => (
+            <div key={item.id} className="h-full cursor-pointer">
+              <Scroll
+                to={item.id}
+                smooth={true}
+                duration={500}
+                offset={-headerHeight}
+                className="h-full flex items-center hover:underline"
+              >
+                <span className="font-bold text-white">{item.title}</span>
+              </Scroll>
+            </div>
+          ))}
+        </Box>
+
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          className="md:hidden text-white"
+          onClick={toggleDrawer}
+        >
+          <MenuIcon />
+        </IconButton>
+
+        <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
+          <Box className="w-64 flex flex-col h-full overflow-y-auto bg-gradient-to-b from-blue-500 to-blue-300 text-white">
+            <IconButton onClick={toggleDrawer} className="self-end text-white">
+              <CloseIcon />
+            </IconButton>
+            <List>
+              {navItems?.map((item) => (
+                <ListItem onClick={toggleDrawer} key={item.id}>
+                  <Scroll
+                    to={item.id}
+                    smooth={true}
+                    duration={500}
+                    offset={-headerHeight}
+                    className="cursor-pointer"
+                  >
+                    <ListItemText>
+                      <span className="font-bold">{item.title}</span>
+                    </ListItemText>
+                  </Scroll>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        </Drawer>
+      </Toolbar>
+    </AppBar>
   );
 }
