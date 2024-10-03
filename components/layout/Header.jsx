@@ -20,7 +20,6 @@ export default function Header({ navItems }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [menuTop, setMenuTop] = useState(0);
   const headerHeight = 64;
-  const menuRef = useRef(null);
 
   useEffect(() => {
     setMenuTop(window.scrollY + headerHeight);
