@@ -17,6 +17,6 @@ export { default as ResearchDemoCards } from './sections/ResearchDemoCards';
 export { default as BaseCard } from './ui/BaseCard';
 export { default as Publication } from './ui/Publication';
 export { default as SocialIcons } from './ui/SocialIcons';
-export { default as VideoPlayer } from './ui/VideoPlayer';
+export { default as VideoThumbnail } from './ui/VideoThumbnail';
 
 

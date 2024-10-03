@@ -1,11 +1,12 @@
 const pathName = 'kenshin';
+const path = `/member_personal_webpages/members/${pathName}`;
 
 export const profileData = {
-  backgroundImage: `/member_personal_webpages/members/${pathName}/bg.jpg`,
+  backgroundImage: `${path}/bg.jpg`,
   email: 'nakanishi@ailab.ics.keio.ac.jp',
   description: '自然言語処理を中心に研究しています。今井研のWeb係も担当しています。',
   grade: '修士課程1年',
-  imageUrl: `/member_personal_webpages/members/${pathName}/profile.jpg`,
+  imageUrl: `${path}/profile.jpg`,
   name: '中西 建心',
   socialMediaLists: [ // ./utils/getSocialIcons.jsに存在するアイコンのみ使用できます
     {
@@ -24,9 +25,9 @@ export const researchData = {
   demoUrls: {
     first: {
       description: 'ビデオでは、Aさんとあなたが横にある絵について会話をしていて、Bさんが話を聞いていない場面です(このビデオではAさんとBさんは、gpt4を用いています。あなたは、人間の入力です)。Aさんとあなたの会話の中で聞き逃すと意味が発生する会話が生じると、該当箇所が黄色と赤色で表示されます（アルゴリズムの判定をわかりやすくするために色をつけてます）。ビデオの中では、この場面で、該当箇所を聞き逃すとどうなるかを、Bさんに話を振ることで確かめています。色のついた場所を聞き逃しているBさんが検討違いのことを言い出すのがわかると思います。',
-      thumbnail: `/member_personal_webpages/members/${pathName}/SCAINs_algo.png`,
+      thumbnail: `${path}/SCAINs_algo.png`,
       title: '聞き逃し支援システム',
-      video: `/member_personal_webpages/members/${pathName}/SCAINs_algo.mp4`,
+      video: `${path}/SCAINs_algo.mp4`,
     },
   },
   contents: {
