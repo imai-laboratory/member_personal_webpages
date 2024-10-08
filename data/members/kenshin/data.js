@@ -18,6 +18,14 @@ export const profileData = {
       name: "Zenn",
       link: "https://zenn.dev/kenshin0011",
     },
+    {
+      name: "Homepage",
+      link: "https://kenshin0011.github.io/my-homepage/",
+    },
+    {
+      name: "Email",
+      link: "https://mail.google.com/mail/u/0/?to=nakanishi@ailab.ics.keio.ac.jp&fs=1&tf=cm",
+    },
   ],
 };
 

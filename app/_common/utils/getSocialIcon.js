@@ -1,6 +1,6 @@
 import {SiQiita, SiZenn} from "react-icons/si";
-import {FaGithub, FaInstagram, FaTwitter} from 'react-icons/fa';
-import {FaXTwitter} from "react-icons/fa6";
+import {FaXTwitter, FaGithub, FaGlobe, FaInstagram, FaTwitter} from "react-icons/fa6";
+import {MdEmail} from "react-icons/md";
 
 const iconMap = {
   GitHub: FaGithub,
@@ -9,6 +9,8 @@ const iconMap = {
   X: FaXTwitter,
   Instagram: FaInstagram,
   Qiita: SiQiita,
+  Homepage: FaGlobe,
+  Email: MdEmail,
 };
 
 export function getSocialIcon(iconName) {
