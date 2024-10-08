@@ -24,8 +24,8 @@ export default function Profile({ profileData }) {
           <h1 className="text-3xl font-bold">{profileData.name}</h1>
           <p className="text-lg text-gray-600">{profileData.grade}</p>
           <div className="flex gap-2 flex-wrap">
-            <strong>所属チーム:</strong>
-            {profileData.teams?.map((team, index) => (
+            <strong>役割：</strong>
+            {profileData.roles?.map((team, index) => (
               <Chip
                 key={index}
                 label={team}
@@ -35,12 +35,11 @@ export default function Profile({ profileData }) {
               />
             ))}
           </div>
-
-          <SocialIcons socialMediaLists={profileData.socialMediaLists} />
-
-          <p className="text-gray-500">
-            {profileData.description}
+          <p>
+            <strong>趣味：</strong>{profileData.description}
           </p>
+
+          <SocialIcons socialMediaLists={profileData.socialMediaLists}/>
         </div>
       </div>
     </section>

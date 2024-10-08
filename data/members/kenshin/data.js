@@ -4,10 +4,11 @@ const path = `/member_personal_webpages/members/${pathName}`;
 export const profileData = {
   backgroundImage: `${path}/bg.jpg`,
   email: 'nakanishi@ailab.ics.keio.ac.jp',
-  description: '自然言語処理を中心に研究しています。今井研のWeb係も担当しています。',
+  description: 'バスケットボール、散歩、フロント・バックエンド開発、ゲーム（原神・崩壊スターレイル）',
   grade: '修士課程1年',
   imageUrl: `${path}/profile.jpg`,
   name: '中西 建心',
+  roles: ['Web係', 'AI心理チーム', 'CRESTチーム'],
   socialMediaLists: [ // ./utils/getSocialIcons.jsに存在するアイコンのみ使用できます
     {
       name: "GitHub",
@@ -18,7 +19,6 @@ export const profileData = {
       link: "https://zenn.dev/kenshin0011",
     },
   ],
-  teams: ['AI心理'],
 };
 
 export const researchData = {
