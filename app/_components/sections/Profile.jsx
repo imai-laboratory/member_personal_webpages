@@ -36,7 +36,7 @@ export default function Profile({ profileData }) {
             ))}
           </div>
           <p>
-            <strong>趣味：</strong>{profileData.description}
+            <strong>趣味：</strong>{profileData.hobbies}
           </p>
 
           <SocialIcons socialMediaLists={profileData.socialMediaLists}/>

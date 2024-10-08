@@ -4,8 +4,8 @@ const path = `/member_personal_webpages/members/${pathName}`;
 export const profileData = {
   backgroundImage: `${path}/bg.jpg`,
   email: 'nakanishi@ailab.ics.keio.ac.jp',
-  description: 'バスケットボール、散歩、フロント・バックエンド開発、ゲーム（原神・崩壊スターレイル）',
   grade: '修士課程1年',
+  hobbies: 'バスケットボール、散歩、フロント・バックエンド開発、ゲーム（原神・崩壊スターレイル）',
   imageUrl: `${path}/profile.jpg`,
   name: '中西 建心',
   roles: ['Web係', 'AI心理チーム', 'CRESTチーム'],
